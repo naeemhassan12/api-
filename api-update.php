@@ -20,4 +20,15 @@ $result = mysqli_query($conn,$stmt);
 else {
     echo json_encode(array('message' => 'No Record Update.', 'status'=> false));
 }
+
+
+
+
+
+
 ?>
+
+
+<p>
+    testing
+</p>
