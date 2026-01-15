@@ -4,13 +4,13 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Method: PUT');
 $data = json_decode(file_get_contents("php://input"), true);
 
-$id = $data['id'];
+$id = $data['sid'];
 $city = $data['city'];
 $code = $data['code'];
 
     include "db.php";
 
-$stmt = "UPDATE students SET name = '{$name}',  city='{$city}' WHERE id = {$id} ";
+$stmt = "UPDATE countries SET name ='{$city}',  code='{$code}' WHERE id = {$id} ";
 $result = mysqli_query($conn,$stmt);
 
     if($result){
@@ -28,11 +28,3 @@ else {
 
 ?>
 
-
-<p>
-    testing
-</p>
-<p>tetete</p>
-<p>
-    tetetet
-</p>
